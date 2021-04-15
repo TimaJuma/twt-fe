@@ -1,13 +1,10 @@
 import React from 'react';
-import {Button} from "@material-ui/core"
+import SignIn from "./pages/SignIn"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        HELLO
-        <Button>Click ME</Button>
-      </header>
+      <SignIn />
     </div>
   );
 }
