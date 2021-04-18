@@ -4,27 +4,28 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/CloseOutlined";
 import { useStylesSignIn } from "../pages/SignIn";
 
-interface ModalProps {
+interface ModalBlockProps {
   title: string;
   children: React.ReactNode;
-  classes: ReturnType<typeof useStylesSignIn>;
+  classes?: ReturnType<typeof useStylesSignIn>;
+  visible?: boolean;
+  onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({
+const Modal: React.FC<ModalBlockProps> = ({
   title,
   classes,
+  visible = false,
+  onClose,
   children,
-}): React.ReactElement => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
+}): React.ReactElement | null => {
+  if (!visible) {
+    return null;
+  }
   return (
-    <Dialog onClose={setOpen} open={open} title="Login">
+    <Dialog onClose={onClose} open={visible} title="Login">
       <DialogTitle>
-        <IconButton color="secondary" aria-label="position">
+        <IconButton onClick={onClose} color="secondary" aria-label="position">
           <CloseIcon style={{ fontSize: 26 }} color="secondary" />
         </IconButton>
         {title}

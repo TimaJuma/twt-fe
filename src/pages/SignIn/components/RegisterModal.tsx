@@ -10,19 +10,19 @@ import {
 import ModalBlock from "../../../components/ModalBlock";
 import { useStylesSignIn } from "..";
 
-interface LoginModalProps {
+interface RegisterModalProps {
   open: boolean;
   onClose: () => void;
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({
+const RegisterModal: React.FC<RegisterModalProps> = ({
   open,
   onClose,
 }): React.ReactElement => {
   const classes = useStylesSignIn();
   return (
     <ModalBlock
-      title="Login"
+      title="Register"
       classes={classes}
       visible={open}
       onClose={onClose}
@@ -31,7 +31,18 @@ const LoginModal: React.FC<LoginModalProps> = ({
         <FormControl component="fieldset" fullWidth>
           <FormGroup aria-label="position" row>
             <TextField
-              className={classes.loginSideFields}
+              className={classes.registerFields}
+              autoFocus
+              margin="dense"
+              id="name"
+              label="Name"
+              type="text"
+              variant="filled"
+              fullWidth
+              InputLabelProps={{ shrink: true }}
+            />
+            <TextField
+              className={classes.registerFields}
               autoFocus
               margin="dense"
               id="email"
@@ -42,7 +53,7 @@ const LoginModal: React.FC<LoginModalProps> = ({
               InputLabelProps={{ shrink: true }}
             />
             <TextField
-              className={classes.loginSideFields}
+              className={classes.registerFields}
               autoFocus
               margin="dense"
               id="password"
@@ -59,4 +70,4 @@ const LoginModal: React.FC<LoginModalProps> = ({
   );
 };
 
-export default LoginModal;
+export default RegisterModal;

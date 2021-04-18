@@ -4,7 +4,8 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import SearchIcon from "@material-ui/icons/Search";
 import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
 import MessageIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
-import LoginModal from "./SignIn/components/LoginModal";
+import LoginModal from "./components/LoginModal";
+import RegisterModal from "./components/RegisterModal";
 
 export const useStylesSignIn = makeStyles((theme) => ({
   wrapper: {
@@ -54,10 +55,9 @@ export const useStylesSignIn = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flex: "0 0 50%",
-    overflow: "hidden",
   },
   loginTwitterIcon: {
-    fontSize: 50,
+    fontSize: 45,
   },
   loginSideWrapper: {
     width: 380,
@@ -65,14 +65,31 @@ export const useStylesSignIn = makeStyles((theme) => ({
   loginSideTitle: {
     fontWeight: 700,
     fontSize: 32,
-    marginBottom: 45,
+    marginBottom: 60,
     marginTop: 20,
+  },
+  loginSideFields: {
+    marginBottom: 18,
+  },
+  registerFields: {
+    marginBottom: theme.spacing(5),
   },
 }));
 
-const SignIn = () => {
+const SignIn: React.FC = (): React.ReactElement => {
   const classes = useStylesSignIn();
-  //   const [open, setOpen] = React.useState<boolean | void>();
+  const [openModal, setOpenModal] = React.useState<"signIn" | "signOut">();
+
+  const handleClickSignIn = (): void => {
+    setOpenModal("signIn");
+  };
+  const handleClickSignUp = (): void => {
+    setOpenModal("signOut");
+  };
+
+  const handleCloseModal = (): void => {
+    setOpenModal(undefined);
+  };
 
   return (
     <div className={classes.wrapper}>
@@ -80,7 +97,6 @@ const SignIn = () => {
         <TwitterIcon className={classes.blueSideBigIcon} color="primary" />
         <ul className={classes.blueSideListInfo}>
           <li className={classes.blueSideListInfoItem}>
-            {" "}
             <Typography variant="h6">
               <SearchIcon className={classes.blueSideListInfoIcon} />
               Read what is interesting to you
@@ -111,6 +127,7 @@ const SignIn = () => {
           </Typography>
           <br />
           <Button
+            onClick={handleClickSignUp}
             style={{ marginBottom: 20 }}
             variant="contained"
             color="primary"
@@ -118,10 +135,22 @@ const SignIn = () => {
           >
             Register
           </Button>
-          <Button variant="outlined" color="primary" fullWidth>
+          <Button
+            onClick={handleClickSignIn}
+            variant="outlined"
+            color="primary"
+            fullWidth
+          >
             Log In
           </Button>
-          {/* <LoginModal open={open} onClose={setOpen}/> */}
+          <LoginModal
+            open={openModal === "signIn"}
+            onClose={handleCloseModal}
+          />
+          <RegisterModal
+            open={openModal === "signOut"}
+            onClose={handleCloseModal}
+          />
         </div>
       </section>
     </div>
