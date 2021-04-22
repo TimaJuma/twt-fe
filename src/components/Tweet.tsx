@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { useHomeStyles } from "../pages/Home";
+import { useHomeStyles } from "../pages/theme";
 
 import { Avatar, Grid, Paper, Typography } from "@material-ui/core";
 
