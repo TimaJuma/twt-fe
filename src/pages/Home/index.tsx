@@ -39,7 +39,9 @@ const Home = (): React.ReactElement => {
               <Typography variant="h6">Main Page</Typography>
             </Paper>
             <Paper>
-              <AddTweetForm classes={classes} />
+              <div className={classes.addForm}>
+                <AddTweetForm classes={classes} maxRows={15} />
+              </div>
               <div className={classes.addFormBottomLine} />
             </Paper>
 

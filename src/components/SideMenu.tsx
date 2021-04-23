@@ -21,7 +21,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
   classes,
 }: SideMenuProps): React.ReactElement => {
   const [visibleAddTweet, setVisibleAddTweet] = React.useState<boolean>(false);
-  const handleClickOpenTweet = () => {
+  const handleClickOpenTweet = (): void => {
     setVisibleAddTweet(true);
   };
   const onCloseAddTweet = (): void => {
@@ -112,7 +112,9 @@ const SideMenu: React.FC<SideMenuProps> = ({
           onClose={onCloseAddTweet}
           visible={visibleAddTweet}
         >
-          <AddTweetForm classes={classes} />
+          <div style={{ width: 550 }}>
+            <AddTweetForm maxRows={15} classes={classes} />
+          </div>
         </ModalBlock>
       </li>
     </ul>
