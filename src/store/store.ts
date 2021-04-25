@@ -1,9 +1,15 @@
-import { createStore } from "redux";
+import { compose, createStore } from "redux";
+import { rootReducer } from "./rootRecucer";
+import createSagaMiddleware from "redux-saga";
 
-function reducer(state = 0, action: any): void {
-  console.log(state, action);
-  return;
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+  }
 }
+
+const sagaMiddleware = createSagaMiddleware();
+// sagaMiddleware.run();
 
 const composeEnhancers =
   (typeof window !== "undefined" &&
@@ -11,4 +17,4 @@ const composeEnhancers =
   compose;
 
 // @ts-ignore
-export const store = createStore(reducer);
+export const store = createStore(rootReducer, composeEnhancers());
