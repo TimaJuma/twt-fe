@@ -1,6 +1,7 @@
-import { compose, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
 import { rootReducer } from "./rootRecucer";
 import createSagaMiddleware from "redux-saga";
+import rootSaga from "./saga";
 
 declare global {
   interface Window {
@@ -9,7 +10,6 @@ declare global {
 }
 
 const sagaMiddleware = createSagaMiddleware();
-// sagaMiddleware.run();
 
 const composeEnhancers =
   (typeof window !== "undefined" &&
@@ -17,4 +17,9 @@ const composeEnhancers =
   compose;
 
 // @ts-ignore
-export const store = createStore(rootReducer, composeEnhancers());
+export const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(sagaMiddleware))
+);
+
+sagaMiddleware.run(rootSaga);
