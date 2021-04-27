@@ -21,11 +21,26 @@ import {
   Divider,
   ListItemAvatar,
 } from "@material-ui/core";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import SearchIcon from "@material-ui/icons/SearchOutlined";
 import { PersonPinCircleOutlined } from "@material-ui/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTweets } from "../../store/ducks/tweets/actionCreators";
+import {
+  selectIsTweetsLoading,
+  selectTweetsItems,
+} from "../../store/ducks/tweets/selectors";
 
 const Home = (): React.ReactElement => {
+  const dispatch = useDispatch();
   const classes = useHomeStyles();
+
+  const tweets = useSelector(selectTweetsItems);
+  const isLoading = useSelector(selectIsTweetsLoading);
+
+  React.useEffect(() => {
+    dispatch(fetchTweets());
+  }, [dispatch]);
 
   return (
     <Container maxWidth="lg" className={classes.wrapper}>
@@ -45,24 +60,20 @@ const Home = (): React.ReactElement => {
               <div className={classes.addFormBottomLine} />
             </Paper>
 
-            {[
-              ...new Array(20).fill(
+            {isLoading ? (
+              <div className={classes.tweetsCentred}>
+                <CircularProgress />
+              </div>
+            ) : (
+              tweets.map((tweet) => (
                 <Tweet
-                  text="This is another tweet. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus dignissimos nostrum distinctio obcaecati
-                  consequuntur quibusdam cumque aut at hic sed vitae
-                  molestiae, nesciunt qui tempora voluptates autem impedit rem
-                  quo?"
-                  user={{
-                    fullname: "John",
-                    username: "GafiraZhur",
-                    avatarUrl:
-                      "https://luxurylaunches.com/wp-content/uploads/2019/09/Businessman-fashion.jpeg",
-                  }}
+                  key={tweet._id}
+                  text={tweet.text}
+                  user={tweet.user}
                   classes={classes}
                 />
-              ),
-            ]}
+              ))
+            )}
           </Paper>
         </Grid>
         <Grid item xs={3} md={3}>
