@@ -1,0 +1,124 @@
+{
+  "tweets": [
+    {
+      "_id": "6088d0f3fd1e206fa0113cd0",
+      "text": "Pariatur incididunt consequat cillum incididunt ex veniam et sit irure veniam sit et incididunt. Exercitation non ea non do id elit elit exercitation reprehenderit consequat irure officia sint velit. Dolor proident proident elit irure quis duis adipisicing. Cillum magna velit proident deserunt commodo esse sunt amet magna tempor in ex nostrud veniam.",
+      "user": {
+        "fullname": "Mandy Mccullough",
+        "username": "gardner",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?5"
+      }
+    },
+    {
+      "_id": "6088d0f315d5bce7d3148e00",
+      "text": "Consequat nostrud id sit sint occaecat est ullamco. Do nulla sit qui adipisicing in. Elit nostrud ullamco Lorem non proident cillum ex. Sit sint sit reprehenderit proident occaecat pariatur dolor incididunt sunt aute deserunt laboris.",
+      "user": {
+        "fullname": "Juana Peck",
+        "username": "beasley",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?7"
+      }
+    },
+    {
+      "_id": "6088d0f32015307cd4ac6d56",
+      "text": "Sit commodo deserunt est id ut sunt excepteur consequat aliquip eu eu est. Amet magna fugiat aute dolor elit adipisicing eiusmod cupidatat nostrud aliqua. Ipsum laborum ex laboris nostrud. Cupidatat tempor ad elit mollit nostrud consectetur esse exercitation veniam eiusmod irure sunt.",
+      "user": {
+        "fullname": "Daugherty Brady",
+        "username": "holmes",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?5"
+      }
+    },
+    {
+      "_id": "6088d0f3d00049d3df7ac4e2",
+      "text": "Incididunt adipisicing fugiat nostrud irure laboris irure anim dolor mollit labore enim velit. Labore nisi ex non fugiat aliqua eiusmod eiusmod anim veniam nulla excepteur labore ut officia. Ea occaecat aute dolor dolore ipsum consequat labore. Eiusmod mollit ipsum do elit officia quis qui enim proident labore.",
+      "user": {
+        "fullname": "Stone Bridges",
+        "username": "solomon",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+      }
+    },
+    {
+      "_id": "6088d0f31e34439d9df5332c",
+      "text": "Commodo reprehenderit exercitation do esse qui fugiat mollit sit et deserunt sunt commodo. Veniam esse mollit pariatur minim velit eu labore laboris velit. Aute nostrud elit incididunt ea. Exercitation in magna nisi nostrud.",
+      "user": {
+        "fullname": "Hamilton Holt",
+        "username": "dickson",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "6088d0f3b99ca5c462f44f2c",
+      "text": "Non deserunt consectetur reprehenderit mollit ipsum aute sint. Id ad qui excepteur mollit duis est amet. Fugiat enim eu esse eiusmod officia Lorem ut deserunt ullamco est cillum. Sit ea veniam dolor laborum et id reprehenderit.",
+      "user": {
+        "fullname": "Wilder Hensley",
+        "username": "good",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?6"
+      }
+    },
+    {
+      "_id": "6088d0f3dff1e77326d99f79",
+      "text": "Ut ipsum incididunt adipisicing anim elit voluptate pariatur quis cillum velit ut. Do officia aliqua fugiat aliqua qui dolor fugiat proident enim qui velit. Occaecat proident ex do ipsum labore commodo dolor ullamco commodo labore aute. Velit nisi et minim pariatur eu.",
+      "user": {
+        "fullname": "Kerri Bradshaw",
+        "username": "harding",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "6088d0f3b5f48120f27a18a7",
+      "text": "Tempor sint id minim sit incididunt ut ipsum labore reprehenderit est consectetur sunt ullamco exercitation. Nulla et cupidatat commodo ea aliquip aute enim voluptate enim eu cillum deserunt aliquip. Ipsum magna ad nostrud mollit. Anim mollit exercitation tempor qui deserunt esse et reprehenderit cupidatat enim.",
+      "user": {
+        "fullname": "Walsh Simpson",
+        "username": "wolfe",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?7"
+      }
+    },
+    {
+      "_id": "6088d0f3faf40d0949db1138",
+      "text": "Cillum proident laboris sint magna id laboris ut et anim aliqua sint. Et ut enim enim laborum nulla non. Voluptate culpa nisi sunt quis sunt ad ullamco. Laboris occaecat dolor non irure voluptate.",
+      "user": {
+        "fullname": "Hunt Obrien",
+        "username": "poole",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?1"
+      }
+    },
+    {
+      "_id": "6088d0f39f22362cc21dda74",
+      "text": "Do dolor duis dolor eu eiusmod cillum culpa eiusmod consequat exercitation dolore. Labore duis mollit dolor aliqua amet mollit laboris mollit fugiat anim. Sit nisi aute deserunt excepteur id ipsum sit duis occaecat consectetur. Qui adipisicing ipsum amet deserunt ipsum sit cupidatat aute ea ea irure reprehenderit.",
+      "user": {
+        "fullname": "Aurora Manning",
+        "username": "carson",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?6"
+      }
+    }
+  ],
+  "tags": [
+    { "name": "#RESTORESNYDERVERSE", "count": 1123 },
+    { "name": "#NAVALNIY", "count": 4500 },
+    { "name": "#NAVALNIY", "count": 444 },
+    { "name": "#HISTORYPORN", "count": 1523 },
+    { "name": "#VACCINE", "count": 11 }
+  ],
+  "users": [
+    {
+      "fullname": "Juana Peck",
+      "username": "beasley",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?7"
+    },
+    {
+      "fullname": "Hamilton Holt",
+      "username": "dickson",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+    },
+    {
+      "fullname": "Harry Bult",
+      "username": "djackson",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?9"
+    }
+  ],
+  "user": {
+    "_id": "6088d0f3fd1e206fa0113cd0",
+    "fullname": "Mandy Mccullough",
+    "username": "gardner",
+    "avatarUrl": "https://source.unsplash.com/random/100x100?5"
+  }
+}
