@@ -1,26 +1,21 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { TweetsAPI } from "../../../services/api/tweetsApi";
+import { TagsAPI } from "../../../services/api/tagsApi";
 import { LoadingState } from "./contracts/state";
 import {
-  setTweets,
-  setTweetsLoadingState,
-  TweetsActionTypes,
+  setTags,
+  setTagsLoadingState,
+  TagsActionTypes,
 } from "./actionCreators";
 
-export function* fetchTweetsRequest(): any {
+export function* fetchTagsRequest(): any {
   try {
-    const items = yield call(TweetsAPI.fetchTweets);
-    yield put(setTweets(items));
+    const items = yield call(TagsAPI.fetchTags);
+    yield put(setTags(items));
   } catch (error) {
-    yield put(setTweetsLoadingState(LoadingState.ERROR));
+    yield put(setTagsLoadingState(LoadingState.ERROR));
   }
 }
 
-// export async function testf() {
-//   const DATA = await TweetsAPI.fetchTweets();
-//   console.log({ DATA });
-// }
-
-export function* tweetsSaga() {
-  yield takeLatest(TweetsActionTypes.FETCH_TWEETS, fetchTweetsRequest);
+export function* tagsSaga() {
+  yield takeLatest(TagsActionTypes.FETCH_ITEMS, fetchTagsRequest);
 }

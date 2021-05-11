@@ -11,7 +11,7 @@ export interface Tag {
   count: number;
 }
 
-export interface TweetsState {
+export interface TagsState {
   items: Tag[];
   loadingState: LoadingState;
 }
