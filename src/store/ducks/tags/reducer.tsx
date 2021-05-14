@@ -7,7 +7,7 @@ const initialState: TagsState = {
   loadingState: LoadingState.NEVER_LOADED,
 };
 
-export const tweetsReducer = produce(
+export const tagsReducer = produce(
   (draft: Draft<TagsState>, action: TagsActions) => {
     switch (action.type) {
       case TagsActionTypes.SET_ITEMS:

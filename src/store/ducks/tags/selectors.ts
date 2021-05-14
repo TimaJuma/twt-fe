@@ -2,18 +2,18 @@ import { createSelector } from "reselect";
 import { RootState } from "../../store";
 import { LoadingState, TagsState } from "./contracts/state";
 
-// export const selectTweets = (state: RootState): TagsState => state.tweets;
+export const selectTags = (state: RootState): TagsState => state.tags;
 
-// export const selectTweetsItems = createSelector(
-//   selectTweets,
+export const selectLoadingState = (state: RootState): LoadingState =>
+  selectTags(state).loadingState;
+
+export const selectIsTagsLoading = (state: RootState): boolean =>
+  selectLoadingState(state) === LoadingState.LOADING;
+
+export const selectIsTagsLoaded = (state: RootState): boolean =>
+  selectLoadingState(state) === LoadingState.LOADED;
+
+// export const selectTagsItems = createSelector(
+//   selectTags,
 //   (tweets) => tweets.items
 // );
-
-// export const selectLoadingState = (state: RootState): LoadingState =>
-//   selectTweets(state).loadingState;
-
-// export const selectIsTweetsLoading = (state: RootState): boolean =>
-//   selectLoadingState(state) === LoadingState.LOADING;
-
-// export const selectIsTweetsLoaded = (state: RootState): boolean =>
-//   selectLoadingState(state) === LoadingState.LOADED;
