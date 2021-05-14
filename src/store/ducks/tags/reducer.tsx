@@ -16,6 +16,7 @@ export const tagsReducer = produce(
         return;
 
       case TagsActionTypes.FETCH_ITEMS:
+        console.log("HIH");
         draft.items = [];
         draft.loadingState = LoadingState.LOADING;
         return;

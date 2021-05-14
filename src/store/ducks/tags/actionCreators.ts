@@ -3,7 +3,7 @@ import { TagsState, LoadingState } from "./contracts/state";
 
 export enum TagsActionTypes {
   SET_ITEMS = "tags/SET_ITEMS",
-  FETCH_ITEMS = "tags/FETCH_TWEETS",
+  FETCH_ITEMS = "tags/FETCH_ITEMS",
   SET_LOADING_STATE = "tags/SET_LOADING_STATE",
 }
 
