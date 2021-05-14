@@ -9,6 +9,7 @@ import {
 
 export function* fetchTagsRequest(): any {
   try {
+    console.log("will fetch tags");
     const items = yield call(TagsAPI.fetchTags);
     yield put(setTags(items));
   } catch (error) {

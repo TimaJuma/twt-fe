@@ -4,6 +4,7 @@ import AddTweetForm from "../../components/AddTweetForm";
 import SearchTextField from "../../components/SearchTextField";
 import SideMenu from "../../components/SideMenu";
 import Tweet from "../../components/Tweet";
+import Tags from "../../components/Tags";
 
 import { useHomeStyles } from "../theme";
 
@@ -90,7 +91,7 @@ const Home = (): React.ReactElement => {
                 ),
               }}
             />
-            <Paper className={classes.rightSideBlock}>
+            {/* <Paper className={classes.rightSideBlock}>
               <Paper className={classes.rightSideBlockHeader}>
                 <b>Trending topics</b>
               </Paper>
@@ -129,7 +130,8 @@ const Home = (): React.ReactElement => {
                 </ListItem>
                 <Divider component="li" />
               </List>
-            </Paper>
+            </Paper> */}
+            <Tags classes={classes} />
             <Paper className={classes.rightSideBlock}>
               <Paper
                 className={classes.rightSideBlockHeader}
