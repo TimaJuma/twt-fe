@@ -3,8 +3,8 @@ import { TagsState } from "../../store/ducks/tags/contracts/state";
 
 export const TagsAPI = {
   async fetchTags(): Promise<TagsState["items"]> {
-    const { data } = await axios.get("/tags");
-    console.log({ data });
-    return data;
+    const res = await axios.get("/tags");
+    console.log("RES: " + res);
+    return res.data;
   },
 };

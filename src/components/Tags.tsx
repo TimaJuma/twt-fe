@@ -17,6 +17,7 @@ import {
   selectTagsItems,
   selectIsTagsLoaded,
 } from "../store/ducks/tags/selectors";
+import { Link } from "react-router-dom";
 
 interface TagsProps {
   classes: ReturnType<typeof useHomeStyles>;
@@ -29,7 +30,7 @@ const Tags: React.FC<TagsProps> = ({
   const items = useSelector(selectTagsItems);
   const isLoaded = useSelector(selectIsTagsLoaded);
 
-  console.log("TAGS render", items, isLoaded);
+  console.log("TAGS renderEDDD", items, isLoaded);
 
   //   if (!isLoaded) {
   //     return null;
@@ -76,14 +77,16 @@ const Tags: React.FC<TagsProps> = ({
         <Divider component="li" />
         {items.map((item) => (
           <ListItem key={item._id} className={classes.rightSideBlockItem}>
-            <ListItemText
-              primary={item.name}
-              secondary={
-                <Typography component="span" variant="body2">
-                  Tweets: {item.count}
-                </Typography>
-              }
-            />
+            <Link to={`/home/search?=${item.name}`}>
+              <ListItemText
+                primary={item.name}
+                secondary={
+                  <Typography component="span" variant="body2">
+                    Tweets: {item.count}
+                  </Typography>
+                }
+              />
+            </Link>
           </ListItem>
         ))}
       </List>
