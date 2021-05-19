@@ -26,17 +26,24 @@ export interface SetTagsLoadingStateActionInterface
 // function that return an object of type given Interface
 export const setTags = (
   payload: TagsState["items"]
-): SetTagsActionInterface => ({
-  type: TagsActionTypes.SET_ITEMS,
-  payload,
-});
+): SetTagsActionInterface => {
+  console.log("SET TAGS");
+  return {
+    type: TagsActionTypes.SET_ITEMS,
+    payload,
+  };
+};
 
 export const setTagsLoadingState = (
   payload: LoadingState
-): SetTagsLoadingStateActionInterface => ({
-  type: TagsActionTypes.SET_LOADING_STATE,
-  payload,
-});
+): SetTagsLoadingStateActionInterface => {
+  console.log("AHAHAHA");
+
+  return {
+    type: TagsActionTypes.SET_LOADING_STATE,
+    payload,
+  };
+};
 
 export const fetchTags = (): FetchTagsActionInterface => ({
   type: TagsActionTypes.FETCH_ITEMS,
