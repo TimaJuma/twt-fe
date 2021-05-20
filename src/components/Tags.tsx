@@ -11,12 +11,13 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import { TagsState } from "../store/ducks/tags/contracts/state";
-import { useSelector } from "react-redux";
-import {
-  selectTagsItems,
-  selectIsTagsLoaded,
-} from "../store/ducks/tags/selectors";
+// import { TagsState } from "../store/ducks/tags/contracts/state";
+// import { useSelector } from "react-redux";
+// import {
+//   selectTagsItems,
+//   selectIsTagsLoaded,
+// } from "../store/ducks/tags/selectors";
+import { TagsAPI } from "../services/api/tagsApi";
 import { Link } from "react-router-dom";
 
 interface TagsProps {
@@ -27,10 +28,12 @@ interface TagsProps {
 const Tags: React.FC<TagsProps> = ({
   classes,
 }: TagsProps): React.ReactElement | null => {
-  const items = useSelector(selectTagsItems);
-  const isLoaded = useSelector(selectIsTagsLoaded);
+  const items = TagsAPI.fetchTags();
+  console.log({ items });
+  // const items = useSelector(selectTagsItems);
+  // const isLoaded = useSelector(selectIsTagsLoaded);
 
-  console.log("TAGS renderEDDD", items, isLoaded);
+  // console.log("TAGS renderEDDD", items, isLoaded);
 
   //   if (!isLoaded) {
   //     return null;
@@ -75,7 +78,7 @@ const Tags: React.FC<TagsProps> = ({
           />
         </ListItem>
         <Divider component="li" />
-        {items.map((item) => (
+        {/* {items.map((item) => (
           <ListItem key={item._id} className={classes.rightSideBlockItem}>
             <Link to={`/home/search?=${item.name}`}>
               <ListItemText
@@ -88,7 +91,7 @@ const Tags: React.FC<TagsProps> = ({
               />
             </Link>
           </ListItem>
-        ))}
+        ))} */}
       </List>
     </Paper>
   );
