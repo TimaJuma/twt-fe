@@ -5,6 +5,6 @@ export const TagsAPI = {
   async fetchTags(): Promise<TagsState> {
     const res = await axios.get("/tags");
     console.log("RES: " + res.data);
-    return res.data;
+    return res.data as TagsState;
   },
 };
